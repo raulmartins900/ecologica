@@ -1,14 +1,18 @@
 import React from "react"
-import styles from "./styles.module.css"
-
+import Header from "../../components/Header"
+import Footer from "../../components/Footer"
+import { AppWrapper } from "./styles"
+import "./Home.css"
 
 function Home () {
 return(
-    <div>
+  <AppWrapper>
+    <Header />
+     <div id="page-landing">
 
-        <h1>Ola mundo</h1>
-
-    </div>
+     </div>
+    <Footer />
+  </AppWrapper>
 )}
 
 export default Home
