@@ -1,13 +1,22 @@
-// pages/About.js
 import React from "react";
 
-function About() {
+import Header from "../../components/Header"
+import Footer from "../../components/Footer"
+import Card from "../../features/Cards"
+import { AppWrapper } from "./styles"
+
+import "./Dicas.css"
+
+function Dicas() {
   return (
-    <div>
-      <h1>Dicas</h1>
-      <p>essa é a página de dicas</p>
-    </div>
+   <AppWrapper>
+      <Header />
+        <div id="page-landing">
+          <Card frontSide="teste" backSide="vire" title="titulo"/>
+        </div>
+      <Footer />
+   </AppWrapper>
   );
 }
 
-export default About;
+export default Dicas;

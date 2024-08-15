@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const LogoImage = styled.img`
-    max-width: 250px;
+    max-width: 200px;
     transition: transform 0.3 ease-in-out;
     &:hover{
         transform: scale(1.1)
