@@ -3,7 +3,6 @@
     line-height: 1.5;
     width: 30vw;
     height: 55vh; 
-    border: 1px solid var(--primary); 
     border-radius: 10px;
     background-color: var(--primary);
     cursor: pointer;
