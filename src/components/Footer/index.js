@@ -8,7 +8,7 @@ function Footer() {
       Raul Martins
       </p>
       <p>
-        Materia Nome
+        Oficina Multidisciplinar (Itinerário Formativo) 
       </p>
     </FooterBase>
   );
