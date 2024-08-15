@@ -1,25 +1,25 @@
 import React from "react"
 import "./Cards.css"
+import ReactCardFlip from "react-card-flip";
 
 function Cards(props){
-    const[text,setText] = React.useState(props.frontSide)
-    const[turn, setTurn] = React.useState(0)
-
+    const[isFlipped, setIsFlipped] = React.useState(false)
     function handleClick(){
-        if(turn === 0){
-            setText(props.backSide)
-            setTurn(1)
-        } else {
-            setText(props.frontSide)
-            setTurn(0)
-        }
+        setIsFlipped(!isFlipped)
     }
 
     return(
-        <div className="flash-card" onClick={handleClick}>
-            <div className="flash-card-header">{props.title}</div>
-            <div className="flash-card-content">{text}</div>
-        </div>
+        <ReactCardFlip flipDirection="horizontal" isFlipped={isFlipped}>
+            <div className="flash-card" onClick={handleClick}>
+                <div className="flash-card-header">Pergunta</div>
+                <div className="flash-card-content">{props.frontSide}</div>
+            </div>
+            <div className="flash-card" onClick={handleClick}>
+                <div className="flash-card-header">Resposta</div>
+                <div className="flash-card-content">{props.backSide}</div>
+            </div>
+        </ReactCardFlip>
+        
     )
 
 }
